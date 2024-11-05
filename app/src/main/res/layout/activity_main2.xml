@@ -13,6 +13,7 @@
         android:layout_height="553dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5">
@@ -30,26 +31,25 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/etLatitudN1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="76dp"
+            android:layout_marginTop="128dp"
             android:ems="10"
             android:inputType="text"
-            android:text="Latitud - Longitud"
+            android:text="Latitud "
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.07"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/etLongitudN1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvIdIPVG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="IPVG"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText"
+            app:layout_constraintBottom_toTopOf="@+id/etLatitudN1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.053"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,31 +57,17 @@
             app:layout_constraintVertical_bias="0.863" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/etLatitudN2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="76dp"
+            android:layout_marginBottom="80dp"
             android:ems="10"
             android:inputType="text"
-            android:text="Latitud - Longitud"
+            android:text="Latitud "
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.07"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/editTextText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="152dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Latitud - Longitud"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintBottom_toTopOf="@+id/etLatitudN3"
+            app:layout_constraintEnd_toStartOf="@+id/etLongitudN2"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -90,25 +76,77 @@
             android:layout_height="wrap_content"
             android:text="OUTLET VIVO"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+            app:layout_constraintBottom_toTopOf="@+id/etLatitudN2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.054"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText"
+            app:layout_constraintTop_toBottomOf="@+id/etLatitudN1"
             app:layout_constraintVertical_bias="0.851" />
 
         <TextView
             android:id="@+id/tvIdUDEC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="31dp"
             android:text="UDEC"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextText3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.054"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-            app:layout_constraintVertical_bias="0.823" />
+            app:layout_constraintTop_toBottomOf="@+id/etLatitudN2" />
+
+        <EditText
+            android:id="@+id/etLongitudN1"
+            android:layout_width="171dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="128dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Longitud"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etLatitudN1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etLongitudN2"
+            android:layout_width="171dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="72dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Longitud"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etLatitudN2"
+            app:layout_constraintTop_toBottomOf="@+id/etLongitudN1" />
+
+        <EditText
+            android:id="@+id/etLongitudN3"
+            android:layout_width="170dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="152dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Longitud"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="202dp" />
+
+        <EditText
+            android:id="@+id/etLatitudN3"
+            android:layout_width="175dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="148dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Latitud"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/etLongitudN3"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -118,7 +156,7 @@
         android:layout_height="145dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
         app:layout_constraintVertical_bias="0.5">
