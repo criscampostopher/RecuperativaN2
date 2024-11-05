@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btIR =(Button) findViewById(R.id.btIr);
         Intent intent= new Intent(MainActivity.this, MainActivity2.class);
+
         btIR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -26,7 +26,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" /><!--  Aqui va la Key pero no pude crearla me pedia tarjeta de credito aun utilizando mi correo institucional -->
+            android:value="AIzaSyAUijttT-V-cD2NXuVAH8df1tyxGcp6sms" /><!--  Aqui va la Key pero no pude crearla me pedia tarjeta de credito aun utilizando mi correo institucional -->
 
         <activity
             android:name=".MapsActivity"

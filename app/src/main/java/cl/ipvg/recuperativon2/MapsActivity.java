@@ -2,7 +2,9 @@ package cl.ipvg.recuperativon2;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -17,6 +19,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
+    private String stLatutudN1="",stLatutudN2="",stLatutudN3="",stLongitudN1="",stLongitudN2="",stLongitudN3="";
+    Double LatutudN1,LatutudN2,LatutudN3,LongitudN1,LongitudN2,LongitudN3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +29,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+        stLatutudN1= getIntent().getStringExtra("LatitudN1");
+        stLatutudN2= getIntent().getStringExtra("LatitudN2");
+        stLatutudN3= getIntent().getStringExtra("LatitudN3");
+
+        LatutudN1=Double.parseDouble(stLatutudN1);
+        LatutudN2=Double.parseDouble(stLatutudN2);
+        LatutudN3=Double.parseDouble(stLatutudN3);
+
+        stLongitudN1= getIntent().getStringExtra("LongitudN1");
+        stLongitudN2= getIntent().getStringExtra("LongitudN2");
+        stLongitudN3= getIntent().getStringExtra("LongitudN3");
+
+        LongitudN1=Double.parseDouble(stLongitudN1);
+        LongitudN2=Double.parseDouble(stLongitudN2);
+        LongitudN3=Double.parseDouble(stLongitudN3);
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+
+
+
+
     }
 
     /**
@@ -45,8 +72,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng DireccionN1 = new LatLng(LatutudN1, LongitudN1);
+        LatLng DireccionN2 = new LatLng(LatutudN2, LongitudN2);
+        LatLng DireccionN3 = new LatLng(LatutudN3, LongitudN3);
+        mMap.addMarker(new MarkerOptions().position(DireccionN1).title("PLAZA_BULNES"));
+        mMap.addMarker(new MarkerOptions().position(DireccionN2).title("COPEC"));
+        mMap.addMarker(new MarkerOptions().position(DireccionN3).title("COMISARIA"));
+
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DireccionN1,100));
     }
 }
